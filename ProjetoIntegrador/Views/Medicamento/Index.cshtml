@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProjetoIntegrador.Models.Medicamento>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fabricante.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conteudo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conservacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuantidadeEstoque)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fabricante.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conteudo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conservacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuantidadeEstoque)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

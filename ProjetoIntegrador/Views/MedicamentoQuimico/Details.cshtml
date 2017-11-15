@@ -1,0 +1,42 @@
+﻿@model ProjetoIntegrador.Models.MedicamentoQuimico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MedicamentoQuimico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Medicamento.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medicamento.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quimico.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quimico.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

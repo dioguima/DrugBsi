@@ -1,0 +1,114 @@
+﻿@model ProjetoIntegrador.Models.Medicamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Medicamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fabricante.Cnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fabricante.Cnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conteudo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conteudo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conservacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conservacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Indicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Indicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contraindicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contraindicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModoUtilizacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModoUtilizacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FaixaEtaria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FaixaEtaria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuantidadeEstoque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantidadeEstoque)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

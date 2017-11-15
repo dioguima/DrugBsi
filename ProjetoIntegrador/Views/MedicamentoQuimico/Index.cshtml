@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjetoIntegrador.Models.MedicamentoQuimico>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Medicamento.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quimico.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medicamento.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quimico.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantidade)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
