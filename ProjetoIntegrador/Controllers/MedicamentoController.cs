@@ -20,6 +20,9 @@ namespace ProjetoIntegrador.Controllers
         public ActionResult Index()
         {
             var medicamentos = db.Medicamentos.Include(m => m.Fabricante);
+            string q = Request.QueryString["q"];
+            if (!string.IsNullOrEmpty(q))
+                medicamentos = medicamentos.Where(x => x.Nome.Contains(q));
             return View(medicamentos.ToList());
         }
 
